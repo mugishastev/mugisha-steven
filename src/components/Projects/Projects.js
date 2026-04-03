@@ -25,21 +25,10 @@ function Projects() {
             <ProjectCard
               imgPath={chatify}
               isBlog={false}
-              title="Chatify"
-              description="Personal Chat Room or Workspace to share resources and hangout with friends build with react.js, Material-UI, and Firebase. Have features which allows user for realtime messaging, image sharing as well as supports reactions on messages."
-              ghLink="https://github.com/mugishastev"
-            
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={bitsOfCode}
-              isBlog={false}
-              title="Bits-0f-C0de"
-              description="My personal blog page build with Next.js and Tailwind Css which takes the content from makdown files and renders it using Next.js. Supports dark mode and easy to write blogs using markdown."
-              ghLink="https://github.com/mugishastev"
-              
+              title="Himate Frontend"
+              description="The UI of the Himate chat application v1. Built with modern web technologies to provide a seamless chatting experience."
+              ghLink="https://github.com/mugishastev/-himatefrontend"
+              demoLink="https://himatechat.vercel.app"
             />
           </Col>
 
@@ -47,10 +36,20 @@ function Projects() {
             <ProjectCard
               imgPath={editor}
               isBlog={false}
-              title="Editor.io"
-              description="Online code and markdown editor build with react.js. Online Editor which supports html, css, and js code with instant view of website. Online markdown editor for building README file which supports GFM, Custom Html tags with toolbar and instant preview.Both the editor supports auto save of work using Local Storage"
-              ghLink="https://github.com/mugishastev"
-                          
+              title="Himate Backend"
+              description="The backend of my chatting app. Handles authentication, real-time messaging, and data storage."
+              ghLink="https://github.com/mugishastev/himateappbackend"
+              demoLink="https://himateappbackend.vercel.app"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={bitsOfCode}
+              isBlog={false}
+              title="ISP Support API"
+              description="Full-stack ISP Support API with NestJS, Prisma, GraphQL, and WebSockets. Manage users, customers, services, and real-time tickets. Type-safe, scalable, and ready for real-world ISP support workflows."
+              ghLink="https://github.com/mugishastev/ISP-Support-API"
             />
           </Col>
 
@@ -58,20 +57,9 @@ function Projects() {
             <ProjectCard
               imgPath={leaf}
               isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/mugishastev"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={suicide}
-              isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/mugishastev"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
+              title="Smart Cooperative Hub Backend"
+              description="Smart Cooperative Hub Backend: API and core logic for a cooperative management system, handling member, contribution, and loan management."
+              ghLink="https://github.com/mugishastev/smartbackend"
             />
           </Col>
 
@@ -79,11 +67,10 @@ function Projects() {
             <ProjectCard
               imgPath={emotion}
               isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/mugishastev"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
+              title="Personal Portfolio"
+              description="My self portfolio website (the one you're currently viewing!) built with React.js to showcase my projects, skills, and experience."
+              ghLink="https://github.com/mugishastev/mugisha-steven"
+              demoLink="https://mugisha-steven.vercel.app"
             />
           </Col>
         </Row>

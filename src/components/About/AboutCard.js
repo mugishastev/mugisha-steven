@@ -11,9 +11,9 @@ function AboutCard() {
             Hi Everyone, I am <span className="purple">MUGISHA Steven </span>
             from <span className="purple"> Kigali, RWANDA.</span>
             <br />
-            I am currently employed as a software developer at KIGARAMA TVET.
+            I am currently employed as a Backend Engineer on Sohoza System.
             <br />
-            I have completed Integrated A2  in Software Dvelopment.
+            I have completed an Integrated A2 in Software Development.
             <br />
             <br />
             Apart from coding, some other activities that I love to do!
@@ -23,7 +23,7 @@ function AboutCard() {
               <ImPointRight /> Playing Games
             </li>
             <li className="about-activity">
-              <ImPointRight /> story teller
+              <ImPointRight /> Storytelling
             </li>
             <li className="about-activity">
               <ImPointRight /> Travelling
@@ -33,7 +33,7 @@ function AboutCard() {
           <p style={{ color: "rgb(155 126 172)" }}>
             "Strive to build things that make a difference!"{" "}
           </p>
-          <footer className="blockquote-footer">steven</footer>
+          <footer className="blockquote-footer">Steven</footer>
         </blockquote>
       </Card.Body>
     </Card>

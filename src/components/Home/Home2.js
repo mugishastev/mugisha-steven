@@ -19,21 +19,25 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I fell in love with programming and I have at least learnt
-              something, I think… 🤷‍♂️
+              I fell in love with programming and I have a constant desire to
+              learn and grow… 🤷‍♂️
               <br />
-              <br />I am fluent in classics like
+              <br />
+              Currently, I work as a <b className="purple">Backend Engineer on Sohoza System.</b>
+              <br />
+              <br />
+              Based on my recent projects, I am most fluent in modern technologies like
               <i>
-                <b className="purple"> REACTJS, Javascript and SOLIDITY. </b>
+                <b className="purple"> TypeScript, JavaScript, NestJS, and React.js. </b>
               </i>
               <br />
               <br />
-              My field of Interest's are building new &nbsp;
+              My fields of interest include building scalable &nbsp;
               <i>
-                <b className="purple">Web Technologies and Products </b> and
-                also in areas related to{" "}
+                <b className="purple">Backend Architectures and APIs </b> and
+                also exploring modern{" "}
                 <b className="purple">
-                  Blockchain.
+                  Web Technologies.
                 </b>
               </i>
               <br />
@@ -43,12 +47,12 @@ function Home2() {
               <i>
                 <b className="purple">
                   {" "}
-                  Modern Javascript Library and Frameworks
+                  Modern TypeScript Libraries and Frameworks
                 </b>
               </i>
               &nbsp; like
               <i>
-                <b className="purple"> React.js,TYPESCRIPT and Next.js</b>
+                <b className="purple"> NestJS and Next.js.</b>
               </i>
             </p>
           </Col>
