@@ -32,7 +32,7 @@ function Home() {
                 <Type />
               </div>
 
-              <div className="home-cta" style={{ paddingLeft: 50, marginTop: "20px" }}>
+              <div className="home-cta" style={{ paddingLeft: 50, marginTop: "20px", cursor: "pointer" }}>
                 <Button as={Link} to="/project" className="cta-btn">
                   View My Work
                 </Button>

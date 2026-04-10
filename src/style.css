@@ -37,9 +37,16 @@ html {
 }
 
 .App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: all 0.3s ease;
+}
+
+.main-content {
+  flex: 1 0 auto;
 }
 
 .purple {
@@ -276,17 +283,32 @@ button:focus {
   padding-top: 0 !important;
 }
 
+/* Unified section styling to center content and clear fixed navbar */
+.home-section,
+.project-section,
+.about-section,
+.contact-section,
+.resume-section,
+.experience-section,
+.blog-section {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important; /* Vertically center content */
+  min-height: 100vh !important;
+  padding-top: 100px !important; /* Sufficient buffer for fixed Navbar */
+  padding-bottom: 60px !important; /* Buffer for Footer */
+}
+
 .home-section {
   position: relative;
   background-image: var(--image-gradient), url(./Assets/home-bg.jpg);
   background-position: top center;
   background-repeat: no-repeat;
-  padding-bottom: 30px !important;
-  padding-top: 80px !important;
 }
 
 .home-content {
-  padding: 2rem 0 2rem !important;
+  padding: 0 !important;
+  width: 100%;
   color: var(--text-color);
   text-align: left;
 }
@@ -346,7 +368,7 @@ button:focus {
 
 .home-about-description {
   color: var(--text-color) !important;
-  padding-top: 100px !important;
+  padding-top: 40px !important;
   padding-bottom: 20px !important;
   text-align: center;
 }
@@ -463,8 +485,6 @@ button:focus {
 /* --------- */
 .project-section {
   position: relative !important;
-  padding-top: 150px !important;
-  padding-bottom: 30px !important;
   background-image: var(--section-background-color) !important;
 }
 
@@ -493,8 +513,6 @@ button:focus {
 
 .blog-section {
   position: relative !important;
-  padding-top: 150px !important;
-  padding-bottom: 30px !important;
   background-image: var(--section-background-color) !important;
 }
 
@@ -565,8 +583,6 @@ button:focus {
 
 .about-section {
   position: relative !important;
-  padding-top: 150px !important;
-  padding-bottom: 30px !important;
   background-image: var(--section-background-color) !important;
   color: var(--text-color) !important;
 }
@@ -607,8 +623,6 @@ button:focus {
 /* --------- */
 .contact-section {
   position: relative !important;
-  padding-top: 150px !important;
-  padding-bottom: 30px !important;
   background-image: var(--section-background-color) !important;
   min-height: 100vh;
 }

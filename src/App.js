@@ -47,16 +47,18 @@ function App() {
       <div className="App" id={load ? "no-scroll" : "scroll"} data-theme={theme}>
         <Navbar toggleTheme={toggleTheme} theme={theme} />
         <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/project" element={<Projects />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="/experience" element={<Experience />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<Navigate to="/"/>} />
-        </Routes>
+        <main className="main-content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/project" element={<Projects />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="/experience" element={<Experience />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<Navigate to="/"/>} />
+          </Routes>
+        </main>
         <Footer />
       </div>
     </Router>
