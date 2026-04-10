@@ -1,17 +1,17 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import {
-  SiVisualstudiocode,
   SiPostman,
   SiSlack,
   SiVercel,
 } from "react-icons/si";
+import { VscCode } from "react-icons/vsc";
 
 function Toolstack() {
   return (
     <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
       <Col xs={4} md={2} className="tech-icons">
-        <SiVisualstudiocode />
+        <VscCode />
       </Col>
       <Col xs={4} md={2} className="tech-icons">
         <SiPostman />

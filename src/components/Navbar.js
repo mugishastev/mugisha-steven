@@ -11,11 +11,12 @@ import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
+  AiOutlineContacts,
 } from "react-icons/ai";
-
+import { MdOutlineWorkOutline, MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 import { CgFileDocument } from "react-icons/cg";
 
-function NavBar() {
+function NavBar({ toggleTheme, theme }) {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
 
@@ -73,6 +74,16 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
+                to="/experience"
+                onClick={() => updateExpanded(false)}
+              >
+                <MdOutlineWorkOutline style={{ marginBottom: "2px" }} /> Experience
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
                 to="/project"
                 onClick={() => updateExpanded(false)}
               >
@@ -95,12 +106,28 @@ function NavBar() {
 
             <Nav.Item>
               <Nav.Link
-                href="https://frontend-nine-flame-46.vercel.app/"
-                target="_blank"
-                rel="noreferrer"
+                as={Link}
+                to="/blog"
+                onClick={() => updateExpanded(false)}
               >
-                <ImBlog style={{ marginBottom: "2px" }} /> ecommerce
+                <ImBlog style={{ marginBottom: "2px" }} /> Blog
               </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/contact"
+                onClick={() => updateExpanded(false)}
+              >
+                <AiOutlineContacts style={{ marginBottom: "2px" }} /> Contact
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item className="theme-toggle">
+              <Button onClick={toggleTheme} className="theme-btn">
+                {theme === "dark" ? <MdOutlineLightMode /> : <MdOutlineDarkMode />}
+              </Button>
             </Nav.Item>
 
             <Nav.Item className="fork-btn">
