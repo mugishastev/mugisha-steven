@@ -28,11 +28,11 @@ function Home() {
                 <strong className="main-name"> MUGISHA STEVEN</strong>
               </h1>
 
-              <div style={{ padding: "20px 0 30px 50px", textAlign: "left" }}>
+              <div style={{ padding: "10px 0 20px 50px", textAlign: "left" }}>
                 <Type />
               </div>
 
-              <div className="home-cta" style={{ paddingLeft: 50, marginTop: "10px" }}>
+              <div className="home-cta" style={{ paddingLeft: 50, marginTop: "20px" }}>
                 <Button as={Link} to="/project" className="cta-btn">
                   View My Work
                 </Button>

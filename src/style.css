@@ -273,7 +273,7 @@ button:focus {
 }
 
 .home-header {
-  padding-top: 20px !important;
+  padding-top: 0 !important;
 }
 
 .home-section {
@@ -286,7 +286,7 @@ button:focus {
 }
 
 .home-content {
-  padding: 3rem 0 2rem !important;
+  padding: 2rem 0 2rem !important;
   color: var(--text-color);
   text-align: left;
 }
