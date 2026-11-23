@@ -1,27 +1,24 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import {
-  SiPostman,
-  SiSlack,
-  SiVercel,
-} from "react-icons/si";
+import { SiPostman, SiSlack, SiVercel } from "react-icons/si";
 import { VscCode } from "react-icons/vsc";
+
+const tools = [
+  [VscCode, "Visual Studio Code"],
+  [SiPostman, "Postman"],
+  [SiSlack, "Slack"],
+  [SiVercel, "Vercel"],
+];
 
 function Toolstack() {
   return (
-    <Row style={{ justifyContent: "center", paddingBottom: "50px" }}>
-      <Col xs={4} md={2} className="tech-icons">
-        <VscCode />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiPostman />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiSlack />
-      </Col>
-      <Col xs={4} md={2} className="tech-icons">
-        <SiVercel />
-      </Col>
+    <Row className="justify-content-center tool-stack">
+      {tools.map(([Icon, name]) => (
+        <Col xs={6} sm={4} md={2} className="tech-icons" key={name} title={name}>
+          <Icon aria-hidden="true" />
+          <p>{name}</p>
+        </Col>
+      ))}
     </Row>
   );
 }

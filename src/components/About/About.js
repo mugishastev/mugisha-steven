@@ -11,23 +11,17 @@ import { AiOutlineDownload } from "react-icons/ai";
 
 function About() {
   return (
-    <Container fluid className="about-section">
+    <Container fluid className="about-section" aria-label="About Mugisha Steven">
       <Particle />
       <Container>
-        <Row style={{ justifyContent: "center", padding: "10px" }}>
-          <Col
-            md={7}
-            style={{
-              justifyContent: "center",
-              paddingTop: "30px",
-              paddingBottom: "50px",
-            }}
-          >
-            <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
-              Know Who <strong className="purple">I'M</strong>
+        <Row className="align-items-center about-overview">
+          <Col md={7} className="about-copy">
+            <p className="section-eyebrow">About me</p>
+            <h1 className="project-heading">
+              Building reliable products, <strong className="purple">one idea at a time</strong>
             </h1>
             <AboutCard />
-            <div style={{ textAlign: "center", marginTop: "20px" }}>
+            <div className="about-actions">
               <Button
                 variant="primary"
                 href={pdf}
@@ -35,28 +29,30 @@ function About() {
                 rel="noopener noreferrer"
                 className="cta-btn"
               >
-                <AiOutlineDownload /> &nbsp; Download CV
+                <AiOutlineDownload aria-hidden="true" /> &nbsp; Download CV
               </Button>
+              <a className="about-link" href="/contact">Let’s work together</a>
             </div>
           </Col>
-          <Col
-            md={5}
-            style={{ paddingTop: "120px", paddingBottom: "50px" }}
-            className="about-img"
-          >
-            <img src={laptopImg} alt="about" className="img-fluid" />
+          <Col md={5} className="about-img">
+            <img src={laptopImg} alt="Laptop illustration representing Mugisha Steven’s development work" className="img-fluid" loading="lazy" />
           </Col>
         </Row>
-        <h1 className="project-heading">
-          Professional <strong className="purple">Skillset </strong>
-        </h1>
 
-        <Techstack />
+        <section className="skill-section" aria-labelledby="skill-heading">
+          <p class="section-eyebrow">Technology</p>
+          <h2 id="skill-heading" className="project-heading">
+            Professional <strong className="purple">skillset</strong>
+          </h2>
+          <Techstack />
+        </section>
 
-        <h1 className="project-heading">
-          <strong className="purple">Tools</strong> I use
-        </h1>
-        <Toolstack />
+        <section className="tool-section" aria-labelledby="tool-heading">
+          <h2 id="tool-heading" className="project-heading">
+            <strong className="purple">Tools</strong> I use
+          </h2>
+          <Toolstack />
+        </section>
 
         <Github />
       </Container>

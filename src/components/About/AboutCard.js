@@ -7,32 +7,24 @@ function AboutCard() {
     <Card className="quote-card-view">
       <Card.Body>
         <blockquote className="blockquote mb-0">
-          <p style={{ textAlign: "justify" }}>
-            Hi Everyone, I am <span className="purple">MUGISHA Steven </span>
-            from <span className="purple"> Kigali, RWANDA.</span>
-            <br />
-            I am currently employed as a Backend Engineer on Sohoza System.
-            <br />
-            I have completed an Integrated A2 in Software Development.
-            <br />
-            <br />
-            Apart from coding, some other activities that I love to do!
+          <p className="about-lead">
+            Hi, I’m <span className="purple">Mugisha Steven</span>, a software developer
+            based in <span className="purple">Kigali, Rwanda</span>. I work as a
+            Backend Engineer at <span className="purple">Sohoza System</span>,
+            building APIs and scalable web applications.
           </p>
-          <ul>
-            <li className="about-activity">
-              <ImPointRight /> Playing Games
-            </li>
-            <li className="about-activity">
-              <ImPointRight /> Storytelling
-            </li>
-            <li className="about-activity">
-              <ImPointRight /> Travelling
-            </li>
+          <p>
+            I enjoy turning complex problems into clean, maintainable systems and
+            creating useful experiences for users. My strongest areas include
+            TypeScript, NestJS, PostgreSQL, React, and modern full-stack development.
+          </p>
+          <h2 className="h6 mt-4">Beyond code</h2>
+          <ul className="about-interests">
+            <li><ImPointRight aria-hidden="true" /> Playing games</li>
+            <li><ImPointRight aria-hidden="true" /> Storytelling</li>
+            <li><ImPointRight aria-hidden="true" /> Travelling</li>
           </ul>
-
-          <p style={{ color: "rgb(155 126 172)" }}>
-            "Strive to build things that make a difference!"{" "}
-          </p>
+          <p className="about-motto">“Strive to build things that make a difference!”</p>
           <footer className="blockquote-footer">Steven</footer>
         </blockquote>
       </Card.Body>
