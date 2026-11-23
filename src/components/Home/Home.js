@@ -10,44 +10,45 @@ import Testimonials from "./Testimonials";
 
 function Home() {
   return (
-    <section>
+    <section aria-label="Portfolio home">
       <Container fluid className="home-section" id="home">
         <Particle />
         <Container className="home-content">
           <Row className="align-items-center">
             <Col md={7} className="home-header">
-              <h1 style={{ paddingBottom: 15 }} className="heading">
-                Hi There!{" "}
-                <span className="wave" role="img" aria-label="wave">
+              <p className="home-eyebrow">Software developer · Kigali, Rwanda</p>
+              <h1 className="heading">
+                Hi there!{" "}
+                <span className="wave" role="img" aria-label="waving hand">
                   👋🏻
                 </span>
               </h1>
-
-              <h1 className="heading-name">
-                I'M
-                <strong className="main-name"> MUGISHA STEVEN</strong>
-              </h1>
-
-              <div style={{ padding: "10px 0 20px 50px", textAlign: "left" }}>
+              <h2 className="heading-name">
+                I’m <strong className="main-name">Mugisha Steven</strong>
+              </h2>
+              <div className="home-type-line">
                 <Type />
               </div>
-
-              <div className="home-cta" style={{ paddingLeft: 50, marginTop: "20px", cursor: "pointer" }}>
+              <p className="home-summary">
+                I build web applications and backend services, with a focus on
+                TypeScript, APIs, and practical AI-powered products.
+              </p>
+              <div className="home-cta">
                 <Button as={Link} to="/project" className="cta-btn">
-                  View My Work
+                  View my work
                 </Button>
                 <Button as={Link} to="/contact" className="cta-btn cta-btn-outline">
-                  Contact Me
+                  Contact me
                 </Button>
               </div>
             </Col>
-
-            <Col md={5} style={{ paddingBottom: 20 }}>
+            <Col md={5} className="home-visual">
               <img
                 src={homeLogo}
-                alt="home pic"
+                alt="Illustration representing Mugisha Steven’s software development work"
                 className="img-fluid"
-                style={{ maxHeight: "450px" }}
+                loading="eager"
+                fetchPriority="high"
               />
             </Col>
           </Row>

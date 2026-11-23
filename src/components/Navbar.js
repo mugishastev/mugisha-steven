@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
@@ -20,15 +20,14 @@ function NavBar({ toggleTheme, theme }) {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
 
-  function scrollHandler() {
-    if (window.scrollY >= 20) {
-      updateNavbar(true);
-    } else {
-      updateNavbar(false);
-    }
-  }
+  useEffect(() => {
+    const scrollHandler = () => updateNavbar(window.scrollY >= 20);
+    scrollHandler();
+    window.addEventListener("scroll", scrollHandler, { passive: true });
+    return () => window.removeEventListener("scroll", scrollHandler);
+  }, []);
 
-  window.addEventListener("scroll", scrollHandler);
+  const closeMenu = () => updateExpanded(false);
 
   return (
     <Navbar
@@ -36,18 +35,16 @@ function NavBar({ toggleTheme, theme }) {
       fixed="top"
       expand="md"
       className={navColour ? "sticky" : "navbar"}
+      aria-label="Main navigation"
     >
       <Container>
-        <Navbar.Brand href="/" className="d-flex">
-          <strong className="purple" style={{ fontSize: "1.8rem", fontFamily: "monospace", letterSpacing: "2px" }}>
-            MS.
-          </strong>
+        <Navbar.Brand as={Link} to="/" onClick={closeMenu} aria-label="Mugisha Steven home">
+          <strong className="purple navbar-monogram">MS.</strong>
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
-          onClick={() => {
-            updateExpanded(expand ? false : "expanded");
-          }}
+          aria-label={expand ? "Close navigation menu" : "Open navigation menu"}
+          onClick={() => updateExpanded(expand ? false : "expanded")}
         >
           <span></span>
           <span></span>
@@ -56,88 +53,59 @@ function NavBar({ toggleTheme, theme }) {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
-              <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
-                <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
+              <Nav.Link as={Link} to="/" onClick={closeMenu}>
+                <AiOutlineHome aria-hidden="true" /> Home
               </Nav.Link>
             </Nav.Item>
-
             <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/about"
-                onClick={() => updateExpanded(false)}
-              >
-                <AiOutlineUser style={{ marginBottom: "2px" }} /> About
+              <Nav.Link as={Link} to="/about" onClick={closeMenu}>
+                <AiOutlineUser aria-hidden="true" /> About
               </Nav.Link>
             </Nav.Item>
-
             <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/experience"
-                onClick={() => updateExpanded(false)}
-              >
-                <MdOutlineWorkOutline style={{ marginBottom: "2px" }} /> Experience
+              <Nav.Link as={Link} to="/experience" onClick={closeMenu}>
+                <MdOutlineWorkOutline aria-hidden="true" /> Experience
               </Nav.Link>
             </Nav.Item>
-
             <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/project"
-                onClick={() => updateExpanded(false)}
-              >
-                <AiOutlineFundProjectionScreen
-                  style={{ marginBottom: "2px" }}
-                />{" "}
-                Projects
+              <Nav.Link as={Link} to="/project" onClick={closeMenu}>
+                <AiOutlineFundProjectionScreen aria-hidden="true" /> Projects
               </Nav.Link>
             </Nav.Item>
-
             <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/resume"
-                onClick={() => updateExpanded(false)}
-              >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+              <Nav.Link as={Link} to="/resume" onClick={closeMenu}>
+                <CgFileDocument aria-hidden="true" /> Resume
               </Nav.Link>
             </Nav.Item>
-
             <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/blog"
-                onClick={() => updateExpanded(false)}
-              >
-                <ImBlog style={{ marginBottom: "2px" }} /> Blog
+              <Nav.Link as={Link} to="/blog" onClick={closeMenu}>
+                <ImBlog aria-hidden="true" /> Blog
               </Nav.Link>
             </Nav.Item>
-
             <Nav.Item>
-              <Nav.Link
-                as={Link}
-                to="/contact"
-                onClick={() => updateExpanded(false)}
-              >
-                <AiOutlineContacts style={{ marginBottom: "2px" }} /> Contact
+              <Nav.Link as={Link} to="/contact" onClick={closeMenu}>
+                <AiOutlineContacts aria-hidden="true" /> Contact
               </Nav.Link>
             </Nav.Item>
-
             <Nav.Item className="theme-toggle">
-              <Button onClick={toggleTheme} className="theme-btn">
-                {theme === "dark" ? <MdOutlineLightMode /> : <MdOutlineDarkMode />}
+              <Button
+                onClick={toggleTheme}
+                className="theme-btn"
+                aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
+                title={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}
+              >
+                {theme === "dark" ? <MdOutlineLightMode aria-hidden="true" /> : <MdOutlineDarkMode aria-hidden="true" />}
               </Button>
             </Nav.Item>
-
             <Nav.Item className="fork-btn">
               <Button
                 href="https://github.com/mugishastev/mugisha-steven"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="fork-btn-inner"
+                aria-label="View this portfolio source on GitHub"
               >
-                <CgGitFork style={{ fontSize: "1.2em" }} />{" "}
-                <AiFillStar style={{ fontSize: "1.1em" }} />
+                <CgGitFork aria-hidden="true" /> <AiFillStar aria-hidden="true" />
               </Button>
             </Nav.Item>
           </Nav>
